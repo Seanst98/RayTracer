@@ -1,0 +1,128 @@
+{"nbounces":1,
+	"camera":{
+		"type":"thinlens",
+		"sampling":"jittering",
+		"ap":0.025,
+		"f":0.8,
+		"width":800,
+		"height":800,
+	   "fov":90,
+	   "position": [0.0, 0.0, 0.0],
+	   "lookAt": [0.0, 0.0, 1.0]
+	},
+	"scene":{
+	   "nsamples":50,
+	   "sampling":"random",
+	   "BVH":{
+		   "use":true,
+		   "shapeMax":1
+	   },
+		"backgroundcolor":[1, 0.01, 0.01],
+		"lightsources":[
+			{
+		   "type":"arealight",
+		   "radius":1,
+		   "position":[-10, 10, -15],
+		   "intensity":[200, 200, 200]
+		   },
+		   {
+			"type":"pointlight",
+			"radius":3,
+			"position": [-5, -10, -5], 
+			"intensity":[100, 100, 100]
+			}
+		],
+		"shapes":[
+			{
+			"type":"sphere", 
+			"center": [-0.2, 0.0, 0.5], 
+			"radius":0.2, 
+			"material":{
+				"ks":0.4,
+				"kd":0.8,
+				"specularexponent":3,
+				"diffusecolor":[0.8, 0.6, 0.8],
+				"texture":"../materials/newchecker.jpg",
+				"isGlass":"true",
+				"refractiveIndex": 1.7
+				}
+			},
+			{
+			"type":"sphere", 
+			"center": [0.15, 0.1, 0.25], 
+			"radius":0.05, 
+			"material":{
+				"ks":0.9,
+				"kd":0.8,
+				"specularexponent":10,
+				"diffusecolor":[0.1, 0.1, 0.1],
+				"texture":"",
+				"isGlass":"false",
+				"refractiveIndex": 1.7
+				}
+			},
+			{
+			"type":"sphere", 
+			"center": [-0.1, 0.3, 0.6], 
+			"radius":0.1, 
+			"material":{
+				"ks":0.4,
+				"kd":0.8,
+				"specularexponent":3,
+				"diffusecolor":[1, 1, 1],
+				"texture":"../materials/Terrestrial1.png",
+				"isGlass":"false"
+				}
+			},
+		   {
+		   "type":"plane",
+		   "points": [[0.2,2,0.0],[0.2,-2,0.0],[0.2,-2,2],[0.2,2,2]],
+		   "material":{
+			   "ks":0.4,
+			   "kd":0.7,
+			   "specularexponent":2,
+			   "diffusecolor":[0.75,0.75,0.75],
+			   "texture":"../materials/Terrestrial1.png",
+			   "isGlass":"false"
+			   }
+		   },
+		   {
+		   "type":"triangle",
+		   "points":[[-0.1, -1.2, 1.2], [-0.5, -1.0, 1.2], [-0.75,-0.5, 1.2]],
+			   "material": {
+			   "ks":0.8,
+			   "kd":0.8,
+			   "specularexponent":5,
+			   "diffusecolor":[0.5,0.5,0.9],
+			   "texture":"../materials/Terrestrial2.png",
+			   "isGlass":"false"
+			   }
+		   },
+		   {
+			   "type":"trimesh",
+			   "points":[[-0.1, 0.3, 0.4],[0, 0.2, 0.4],[-0.2, 0.2, 0.4], [0.1, 0.3, 0.4]],
+			   "texturecoordinates":[[0,0,0],[0.2,0.2,0.2],[0.4,0.4,0.4],[0.6,0.6,0.6]],
+			   "material": {
+				"ks":0.8,
+				"kd":0.8,
+				"specularexponent":5,
+				"diffusecolor":[0.5,0.5,0.9],
+				"texture":"../materials/Terrestrial2.png",
+				"isGlass":"false"
+				}
+		   },
+		   {
+			"type":"triangle",
+			"points":[[0.2, -0.2, 0.3], [-0.1, -0.2, 0.3], [0.2,-0.1, 0.3]],
+				"material": {
+				"ks":0.8,
+				"kd":0.8,
+				"specularexponent":5,
+				"diffusecolor":[0.5,0.5,0.9],
+				"texture":"",
+				"isGlass":"true"
+				}
+			}
+		]
+	}
+   }
