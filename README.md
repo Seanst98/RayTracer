@@ -2,7 +2,35 @@
 # Computer Graphics, Autumn 2019
 #
 
-This is the template code supplied for the 2nd assignment of the Computer Graphics course, Autumn 2019, at University of Edinburgh. It dictates the class structure to be followed for the implementation of this assignment. 
+This is the code for a full ray tracer for which I receieved a 95% grade, built upon the template code supplied for the 2nd assignment of the Computer Graphics course, Autumn 2019, at the University of Edinburgh.
+
+# Features 
+
+* Basic Ray Tracing
+* Point Lightsources 
+* Area Lightsources (Soft Shadows)
+* Varying shapes:
+  * Spheres
+  * Planar Quads
+  * Triangles
+  * TriMeshes
+* Texture Mapping For Each Shape
+* Reflections
+* Refraction
+* Bounding Volume Hierarchy (BVH)
+* Pinhole Camera
+* Thin Lens Camera (Depth of Field)
+
+# Example Images
+![Screenshot](example-images/final-image.png)
+
+![Screenshot](example-images/output.png)
+
+![Screenshot](example-images/reflection.png)
+
+![Screenshot](example-images/refraction.png)
+
+# How to Build and Run
 
 Example code for the provided libraries can be found in the examples/ folder, along with an example input file example.json.
 
@@ -32,5 +60,3 @@ To run the examples, do:
 3. for the raytracer provided:
 
 ./raytracer ../examples/example.json <path_to_output_img>/testout.ppm
-
-The raytracer provided outputs an empty file. You will need to implement the actual raytracer. Good luck!
